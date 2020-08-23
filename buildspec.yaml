@@ -13,9 +13,8 @@ phases:
 
   build:
     commands:
-      - "cd $CODEBUILD_SRC_DIR"
+      - "cd $CODEBUILD_SRC_DIR/assignment/"
       - "ls -ltr"
-      - "pwd"
       - "terraform init"
       - "terraform apply --auto-approve"
 
