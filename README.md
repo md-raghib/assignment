@@ -14,4 +14,5 @@ S3 functions covered in Terraform -
 4. Versioning
 5. CORS
 
+Artifacts are stored in s3 bucket and Code pipeline logs are CloudWatch logs
 
