@@ -5,11 +5,14 @@ phases:
     runtime-versions:
       python: 3.7
     commands:
-      - "cd /usr/bin"
-      - "yum -y install terraform"
+      - "curl -O https://releases.hashicorp.com/terraform/0.12.20/terraform_0.12.20_linux_amd64.zip"
+      - "echo $PATH"
+      - "unzip terraform_0.12.20_linux_amd64.zip -d /usr/bin/"
+      - "terraform --version"
 
   build:
     commands:
+      - "ls -ltr"
       - "cd $CODEBUILD_SRC_DIR/assignment/"
       - "pwd"
       - "terraform init"
